@@ -34,13 +34,18 @@ k <- 1
 #Kendrick Mass Defect (CF2-adjusted) also needs to align within 0.001
 for (i in 1:nrow(df1)){
   j <- i+1
-  for (j in j:nrow(df1)){
-    if((abs(df1$mw[i] - df1$mw[j] - CF2) <= 0.001) || (abs(df1$mw[i] - df1$mw[j] - C2F4) <= 0.001) && (abs(df1$mdf[i]-df1$mdf[j]) <= 0.001) && ((df1$rt[j] > df1$rt[i]))){
-      comps[k,] <- rbind(c(df1[i,], df1[j,]))
-      k <- k+1
+  for(j in j:nrow(df1)){
+    if((abs(df1$mw[i] - df1$mw[j] - CF2) <= 0.001) | (abs(df1$mw[i] - df1$mw[j] - C2F4) <= 0.001)){
+      if(df1$rt[i] > df1$rt[j]){
+        if((abs(df1$mdf[i]-df1$mdf[j])) <= 0.001){
+          comps[k,] <- rbind(c(df1[i,], df1[j,]))
+          k <- k+1
+        }
+      }
     }
   }
 }
+comps <- na.omit(comps)
 
 #Calculating the difference between the homologues to assign which type of homologoue it is (CF2 or C2F4)
 comps$mwdiff <- comps$mw1-comps$mw2
