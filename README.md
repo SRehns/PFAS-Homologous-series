@@ -21,3 +21,4 @@ The line 'df1 <- df[c("Calc. MW", "m/z", "RT [min]", "Mass Defect: Kendrick MD [
 
 # Created by
 Svante Rehnstam - Swedish University of Agricultural Sciences (SLU), Department of Aquatic Sciences and Assessment. 
+2023-03-30
