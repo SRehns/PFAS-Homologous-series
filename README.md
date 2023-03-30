@@ -8,6 +8,10 @@ The code uses only base R so no additional packages are necessary to run this co
 The code is customized to look for CF2 and C2F4 homologues in a data frame which contains at minimum retention time, kendrick mass defect, m/z or molecular weights.
 More homologous may be added in the future, such as CF2O-homologues. 
 
+The conditions in the code are as following: an increase in molecular weight corresponding to either CF2 or C2F4 (with a 0.001 Da tolerance), retention time must increase with molecular weight, Kendrick Mass Defect must be within a 0.001 tolerance.
+
+The code will also calculate the ppm difference between "Compound 1" and it's potential homologue. Keep in mind that two out of three values in that calculation are experimental values which may inflate the ppm value.
+
 # Preparation
 In any software which has processed LC-HRMS data, perform QC of sample data to ensure that only high quality peaks are included. Export the remaining compounds and then import them into R.
 
