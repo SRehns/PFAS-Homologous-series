@@ -1,5 +1,6 @@
 # PFAS Homologous series
-A quick and dirty script for making a list of PFAS homologous series from processed LC-HRMS data
+A quick and dirty script for making a list of PFAS homologous series from processed LC-HRMS data.
+I had previously done a brief search on GitHub to see if there was a quick script for this somewhere, as I did not find it I wrote one myself and here it is for other PFAS researchers to use at will.
 
 # Installation and setup
 The code uses only base R so no additional packages are necessary to run this code. Simply download the R-file and open it in R-studio
