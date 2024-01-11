@@ -1,0 +1,12 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: PFAS Homologous Series
+message: Please cite this repo if used for a research publication
+type: software
+authors:
+  - given-names: Svante
+    family-names: Rehnstam
+    email: svante.rehnstam@slu.se
+    affiliation: Swedish University of Agricultural Sciences
